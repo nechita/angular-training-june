@@ -1,0 +1,11 @@
+<div [ngClass]="{'bg-indigo-lightest': even}" class="bookmark-card flex flex-col boder-b border-t hover:bg-grey-lighter justify-between -mx-8 px-8 py-4">
+  <h3>
+    <a class="no-underline text-indigo-dark font-semibold text-2xl" [href]="card.url" target="_blank" rel="noopener"><span class="mr-2" *ngIf="card?.favorite">&#9733;</span>{{card?.title}}</a>
+  </h3>
+  <p class="text-md text-grey-darker">{{card?.description}}</p>
+  <p class="self-end">
+    <a class="bg-blue-lightest hover:bg-blue-lighter text-blue hover:text-blue-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded edit-button cursor-pointer" [routerLink]="'view/' + card.id">
+      Edit bookmark
+    </a>
+  </p>
+</div>

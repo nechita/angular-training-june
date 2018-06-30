@@ -1,0 +1,17 @@
+<div *ngIf="(bookmark |async); else errorOnLoad" class="bookmark-view">
+  <a class="bg-blue-lightest hover:bg-blue-lighter text-blue hover:text-blue-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded edit-button cursor-pointer mb-8 inline-block"
+    (click)="goBack()">&lsaquo; Go Back</a>
+  <bookmark-form [detail]="bookmark" (update)="onUpdateBookmark($event)" (delete)="onDeleteBookmark($event)">
+  </bookmark-form>
+  <div *ngIf="errorDelete">Couldn't delete the bookmark you've wanted.</div>
+</div>
+<ng-template #errorOnLoad>
+  <div class="bookmark-view">Bookmark not found. Please check the
+    <a class="underline text-blue" [routerLink]="'/bookmarks'">available bookmarks</a>
+  </div>
+</ng-template>
+<div *ngIf="errorSave">
+  <div class="bookmark-view">Bookmark not found. Please check the
+    <a class="underline text-blue" [routerLink]="'/bookmarks'">available bookmarks</a>
+  </div>
+</div>

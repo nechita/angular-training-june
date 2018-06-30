@@ -1,0 +1,32 @@
+<div class="bookmark">
+  <div *ngIf="editing">
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight" type="text" [value]="detail.title" (input)="onTitleChange(thisInput.value)" #thisInput>
+  </div>
+  <div *ngIf="!editing">
+    <div class="bookmark-card flex flex-col boder-b border-t justify-between -mx-8 px-8 py-4">
+      <h3>
+        <a class="no-underline text-indigo-dark font-semibold text-2xl" [href]="detail.url" target="_blank" rel="noopener">
+          <span class="mr-2" *ngIf="detail?.favorite">&#9733;</span>{{detail?.title}}</a>
+      </h3>
+      <p class="text-md text-grey-darker">{{detail?.description}}</p>
+    </div>
+  </div>
+  <div class="flex flex-row justify-between items-center mb-8">
+    <a class="leading-none inline-block bg-blue-lightest hover:bg-blue-lighter text-blue hover:text-blue-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded cursor-pointer mr-4"
+      target="_blank" [href]="detail?.url" rel="noopener">
+      Visit &rarr;
+    </a>
+    <div class="flex flex-row">
+      <button type="button" class=" inline-block bg-blue-lightest hover:bg-blue-lighter text-blue hover:text-blue-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded cursor-pointer mr-4"
+        (click)="toggleEdit()">
+        {{ editing ? 'Done editing' : ' Edit title' }}
+      </button>
+      <button type="button" class="inline-block bg-red-lightest hover:bg-red-lighter text-red hover:text-red-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded cursor-pointer mr-4"
+        (click)="onRemoveFromFavorites()">
+        Remove from favorites
+      </button>
+
+    </div>
+
+  </div>
+</div>

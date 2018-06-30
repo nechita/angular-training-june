@@ -1,0 +1,12 @@
+<div *ngIf="(bookmarks | async); else loading">
+  <div class="bookmark-count flex flex-row justify-between mt-4 mb-8">
+    <bookmark-count [items]="bookmarks | async">
+    </bookmark-count>
+    <a class="no-underline bg-grey-lighter hover:bg-grey-light text-grey-dark hover:text-grey-darkest font-light py-2 px-4 rounded" routerLink="./add-new">+ Quick add</a>
+  </div>
+  <bookmark-card *ngFor="let bookmark of bookmarks | async; even as even" [even]="even" [card]="bookmark">
+  </bookmark-card>
+</div>
+<ng-template #loading>
+  <div >This is loading...</div>
+</ng-template>

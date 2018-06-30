@@ -1,0 +1,4 @@
+export enum APP_CONFIG {
+  RETRY_COUNT = 1,
+  DELAY_REQUEST = 1000
+}

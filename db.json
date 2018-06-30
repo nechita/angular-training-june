@@ -1,0 +1,81 @@
+{
+  "bookmarks": [
+    {
+      "id": 3,
+      "title": "Building maintainable Angular applications",
+      "url": "https://angular.io",
+      "description": "After putting a few projects into production, we’ve come up with a set of ground rules to help build applications with Angular.",
+      "favorite": true
+    },
+    {
+      "id": 6,
+      "title": "Growing Your Audience with Random Affinities",
+      "url": "https://moz.com/blog/growing-your-audience-with-random-affinities",
+      "description": "Two topics have ‘random affinity’ if they are connected only by a common audience. ",
+      "favorite": false
+    },
+    {
+      "id": 8,
+      "title": "Rationality Checklist",
+      "url": "http://rationality.org/resources/rationality-checklist",
+      "description": "This checklist is meant for your personal use, so you can have a wish-list of rationality habits and see if you’re acquiring good habits.",
+      "favorite": false
+    },
+    {
+      "id": 9,
+      "title": "12 Rules for Learning Foreign Languages in Record Time — The Only Post You’ll Ever Need",
+      "url": "https://tim.blog/2014/03/21/how-to-learn-a-foreign-language-2/",
+      "description": "How to learn languages, tips from Benny the Irish Polyglot",
+      "favorite": false
+    },
+    {
+      "id": 10,
+      "title": "Health problems I've tried to solve with nutrition",
+      "url": "http://www.adnuther.com/list-of-conditions-fixed-and-unfixed/",
+      "description": "How to affect health aspects with nutrition",
+      "favorite": false
+    },
+    {
+      "id": 11,
+      "title": "Scientific Speed Reading: How to Read 300% Faster in 20 Minutes",
+      "url": "https://tim.blog/2009/07/30/speed-reading-and-accelerated-learning/",
+      "description": "Simple technique to speed up your reading",
+      "favorite": false
+    },
+    {
+      "title": "Orar autobuz",
+      "url": "http://www.ratbv.ro/trasee-si-orare/",
+      "description": "Aceasta este o descriere mirobolantă",
+      "favorite": false,
+      "id": 12
+    },
+    {
+      "title": "Acesta este un titlu mai potrivit pt link",
+      "url": "https://youtu.be/QaPrQa3oMy0",
+      "description": "Aceasta este o descriere mirobolantă",
+      "favorite": false,
+      "id": 13
+    },
+    {
+      "title": "Tailwind css",
+      "url": "http://tailwindcss.com",
+      "favorite": false,
+      "description": "",
+      "id": 14
+    },
+    {
+      "title": "Insider’s guide into interceptors and HttpClient mechanics in Angular",
+      "url": "https://blog.angularindepth.com/insiders-guide-into-interceptors-and-httpclient-mechanics-in-angular-103fbdb397bf",
+      "favorite": false,
+      "description": "",
+      "id": 17
+    },
+    {
+      "title": "The Awesome guide into interceptors and HttpClient mechanics in Angular",
+      "url": "https://blog.angularindepth.com/insiders-guide-into-interceptors-and-httpclient-mechanics-in-angular-103fbdb397bf",
+      "favorite": false,
+      "description": "",
+      "id": 18
+    }
+  ]
+}
