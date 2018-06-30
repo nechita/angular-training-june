@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+
+import { CommonModule } from '@angular/common'; // ngIf, NgFor, NgSwitch
+import { HttpClientModule } from '@angular/common/http'; // http requests
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'; // forms
 
 // containers
 import { BookmarkDashboardComponent } from './containers/bookmark-dashboard/bookmark-dashboard.component';

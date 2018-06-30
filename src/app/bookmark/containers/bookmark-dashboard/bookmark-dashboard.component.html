@@ -1,4 +1,4 @@
-<div *ngIf="(bookmarks | async); else loading">
+<div *ngIf="(bookmarks | async); else loadingDiv">
   <div class="bookmark-count flex flex-row justify-between mt-4 mb-8">
     <bookmark-count [items]="bookmarks | async">
     </bookmark-count>
@@ -7,6 +7,6 @@
   <bookmark-card *ngFor="let bookmark of bookmarks | async; even as even" [even]="even" [card]="bookmark">
   </bookmark-card>
 </div>
-<ng-template #loading>
+<ng-template #loadingDiv>
   <div >This is loading...</div>
 </ng-template>

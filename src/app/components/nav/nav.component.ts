@@ -2,18 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
-  template: `
-  <nav class="nav flex flex-row justify-center items-center bg-grey -mx-8">
-    <a class="hover:bg-grey-dark no-underline text-white font-light py-2 px-8"
-      *ngFor="let item of navigation"
-      [title]="item.title"
-      [routerLink]="item.link"
-      routerLinkActive="bg-grey-darkest"
-      [routerLinkActiveOptions]="{exact: item.exact}">
-      {{item.name}}
-    </a>
-  </nav>
-  `
+  templateUrl: './nav.component.html'
 })
 export class NavComponent {
 
@@ -22,7 +11,7 @@ export class NavComponent {
       link: '/home',
       name: 'Home',
       exact: true,
-      title: 'Something'
+      title: 'Home Link'
     },
     {
       link: '/bookmarks',
@@ -39,6 +28,12 @@ export class NavComponent {
     {
       link: '/bookmarks/add-new',
       name: 'Quick add',
+      exact: true,
+      title: null
+    },
+    {
+      link: '/contact',
+      name: 'Contact',
       exact: true,
       title: null
     }

@@ -1,0 +1,8 @@
+<ng-content select="p"></ng-content>
+<nav class="nav flex flex-row justify-center items-center bg-grey -mx-8">
+  <a class="hover:bg-grey-dark no-underline text-white font-light py-2 px-8" *ngFor="let item of navigation" [title]="item.title" [routerLink]="item.link"
+    routerLinkActive="bg-grey-darkest" [routerLinkActiveOptions]="{exact: item.exact}">
+    {{item.name}}
+  </a>
+  <ng-content select="div"></ng-content>
+</nav>
