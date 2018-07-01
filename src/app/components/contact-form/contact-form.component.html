@@ -1,0 +1,35 @@
+<div>
+  <ng-content select="h1"></ng-content>
+  <form action="">
+    <div>
+      <div>
+        <label for="">Email Address</label>
+      </div>
+      <div>
+        <input type="text">
+      </div>
+    </div>
+    <div>
+      <div>
+        <label for="">Your name</label>
+      </div>
+      <div>
+        <input type="text">
+      </div>
+    </div>
+    <div>
+      <div>
+        <label for="">Your message</label>
+      </div>
+      <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <div>
+      <button type="submit">Send your message</button>
+    </div>
+    <div>
+      <ng-content select="p"></ng-content>
+    </div>
+  </form>
+</div>
