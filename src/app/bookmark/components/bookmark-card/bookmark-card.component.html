@@ -4,7 +4,7 @@
   </h3>
   <p class="text-md text-grey-darker">{{card?.description}}</p>
   <p class="self-end">
-    <a class="bg-blue-lightest hover:bg-blue-lighter text-blue hover:text-blue-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded edit-button cursor-pointer" [routerLink]="'view/' + card.id">
+    <a class="bg-blue-lightest hover:bg-blue-lighter text-blue hover:text-blue-dark no-underline font-light mt-4 text-xs py-2 px-4 rounded edit-button cursor-pointer" (click)="goToLink()">
       Edit bookmark
     </a>
   </p>

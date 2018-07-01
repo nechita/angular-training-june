@@ -7,7 +7,7 @@
             "camelCase"
         ],
         "component-selector": [
-            true,
+            false,
             "element",
             ["app", "bookmark"],
             "kebab-case"

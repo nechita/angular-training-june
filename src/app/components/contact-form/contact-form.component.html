@@ -1,9 +1,10 @@
 <div>
   <ng-content select="h1"></ng-content>
-  <div>value: {{ contactForm.value | json}}</div>
+  <!-- <div>value: {{ contactForm.value | json}}</div>
   <div>valid: {{ contactForm.valid | json}}</div>
-  <div>invalid: {{ contactForm.invalid | json}}</div>
+  <div>invalid: {{ contactForm.invalid | json}}</div> -->
   <form [formGroup]="contactForm" novalidate (ngSubmit)="handleSubmit()">
+    <!-- <p class="text-red text-5xl font-bold uppercase" *ngIf="contactForm.invalid && contactForm.touched">You have errors. Solve them...</p> -->
     <div>
       <div>
         <label for="">Email Address</label>
@@ -11,6 +12,7 @@
       <div>
         <input type="email" formControlName="email">
       </div>
+      <div class="text-red text-xs" *ngIf="emailField.hasError('required') && emailField.touched ">Email is required</div>
     </div>
     <div>
       <div>
@@ -28,8 +30,9 @@
         <textarea name="" id="" cols="30" rows="10" formControlName="message"></textarea>
       </div>
     </div>
-    <div>
+    <div class="flex flex-row justify-start items-center">
       <button type="submit" [disabled]="contactForm.invalid">Send your message</button>
+      <button type="reset" (click)="resetForm()">Reset form</button>
     </div>
 
   </form>

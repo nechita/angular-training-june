@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'contact-form',
@@ -7,9 +7,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
+  emailField: AbstractControl;
 
   @Output()
-  contactMessage: EventEmitter<any> = new EventEmitter<any>();
+  contactMessage: EventEmitter<ContactMessage> = new EventEmitter<ContactMessage>();
 
   constructor(
     private fb: FormBuilder
@@ -19,6 +20,8 @@ export class ContactFormComponent implements OnInit {
       name: [''],
       message: ['']
     });
+
+    this.emailField = this.contactForm.controls['email'];
   }
 
   ngOnInit() {
@@ -32,4 +35,14 @@ export class ContactFormComponent implements OnInit {
     this.contactMessage.emit(this.contactForm.value);
   }
 
+  resetForm() {
+    this.contactForm.reset({});
+  }
+
+}
+
+export interface ContactMessage {
+  email: string;
+  name: string;
+  message: string;
 }

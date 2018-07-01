@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactMessage } from '../contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  onContactFormSubmit(event: any) {
+  onContactFormSubmit(event: ContactMessage) {
     console.log(event);
     // to call a service
   }

@@ -12,6 +12,7 @@ export class BookmarkCardComponent {
   card: Bookmark;
   @Input()
   even: boolean;
+
   constructor(
     private router: Router
   ) { }
