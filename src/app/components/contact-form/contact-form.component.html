@@ -1,12 +1,15 @@
 <div>
   <ng-content select="h1"></ng-content>
-  <form [formGroup]>
+  <div>value: {{ contactForm.value | json}}</div>
+  <div>valid: {{ contactForm.valid | json}}</div>
+  <div>invalid: {{ contactForm.invalid | json}}</div>
+  <form [formGroup]="contactForm" novalidate (ngSubmit)="handleSubmit()">
     <div>
       <div>
         <label for="">Email Address</label>
       </div>
       <div>
-        <input type="text">
+        <input type="email" formControlName="email">
       </div>
     </div>
     <div>
@@ -14,7 +17,7 @@
         <label for="">Your name</label>
       </div>
       <div>
-        <input type="text">
+        <input type="text" formControlName="name">
       </div>
     </div>
     <div>
@@ -22,11 +25,11 @@
         <label for="">Your message</label>
       </div>
       <div>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10" formControlName="message"></textarea>
       </div>
     </div>
     <div>
-      <button type="submit">Send your message</button>
+      <button type="submit" [disabled]="contactForm.invalid">Send your message</button>
     </div>
 
   </form>

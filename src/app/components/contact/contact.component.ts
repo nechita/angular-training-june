@@ -12,4 +12,9 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  onContactFormSubmit(event: any) {
+    console.log(event);
+    // to call a service
+  }
+
 }

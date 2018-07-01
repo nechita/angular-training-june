@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'; // only import in AppModule
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { BookmarkModule } from './bookmark/bookmark.module';
 // containers
 import { AppComponent } from './containers/app/app.component';
@@ -25,6 +27,7 @@ const ROUTES: Routes = [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     // BookmarkModule // if you want to not use lazy loading
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
