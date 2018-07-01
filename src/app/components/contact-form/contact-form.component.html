@@ -1,6 +1,6 @@
 <div>
   <ng-content select="h1"></ng-content>
-  <form action="">
+  <form [formGroup]>
     <div>
       <div>
         <label for="">Email Address</label>
@@ -28,8 +28,9 @@
     <div>
       <button type="submit">Send your message</button>
     </div>
-    <div>
-      <ng-content select="p"></ng-content>
-    </div>
+
   </form>
+  <div>
+    <ng-content select="p"></ng-content>
+  </div>
 </div>
